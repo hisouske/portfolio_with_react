@@ -13,8 +13,9 @@ import ReactPlayer from 'react-player';
 import image1 from "assets/img/bg.jpg";
 import image2 from "assets/img/bg2.jpg";
 import image3 from "assets/img/bg3.jpg";
-
+import Muted from "components/Typography/Muted.js";
 import github from "assets/img/program/github.jpg";
+import gppt from "assets/img/program/googleppt.jpg";
 
 import styles from "assets/jss/material-kit-react/views/componentsSections/carouselStyle.js";
 
@@ -72,10 +73,18 @@ export default function SectionCarousel() {
             </Card>
             
           </GridItem>
-          <GridItem xs={2} sm={2}>
-              <h4>Github</h4>
+          <GridItem xs={2} sm={1}>
+              <Muted>Github              </Muted>
               <img
                 src={github}
+                alt="..."
+                className={classes.imgRounded + " " + classes.imgFluid}
+              />
+            </GridItem>
+            <GridItem xs={2} sm={1}>
+              <Muted>PPT</Muted>
+              <img
+                src={gppt}
                 alt="..."
                 className={classes.imgRounded + " " + classes.imgFluid}
               />
