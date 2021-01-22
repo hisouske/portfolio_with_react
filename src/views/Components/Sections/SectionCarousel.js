@@ -14,6 +14,8 @@ import image1 from "assets/img/bg.jpg";
 import image2 from "assets/img/bg2.jpg";
 import image3 from "assets/img/bg3.jpg";
 
+import github from "assets/img/program/github.jpg";
+
 import styles from "assets/jss/material-kit-react/views/componentsSections/carouselStyle.js";
 
 const useStyles = makeStyles(styles);
@@ -66,8 +68,18 @@ export default function SectionCarousel() {
                   </div>
                 </div>
               </Carousel>
+        
             </Card>
+            
           </GridItem>
+          <GridItem xs={2} sm={2}>
+              <h4>Github</h4>
+              <img
+                src={github}
+                alt="..."
+                className={classes.imgRounded + " " + classes.imgFluid}
+              />
+            </GridItem>
         </GridContainer>
       </div>
     </div>
