@@ -8,7 +8,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 // core components
 import Header from "components/Header/Header.js";
-import Footer from "components/Footer/Footer.js";
+
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
@@ -34,7 +34,7 @@ export default function LandingPage(props) {
       <Header
         color="transparent"
         routes={dashboardRoutes}
-        brand="Material Kit React"
+        brand="Portfolio with React"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
@@ -76,7 +76,7 @@ export default function LandingPage(props) {
           <WorkSection />
         </div>
       </div>
-      <Footer />
+
     </div>
   );
 }

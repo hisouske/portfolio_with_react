@@ -9,7 +9,8 @@ import Palette from "@material-ui/icons/Palette";
 import Favorite from "@material-ui/icons/Favorite";
 // core components
 import Header from "components/Header/Header.js";
-import Footer from "components/Footer/Footer.js";
+import Card from "components/Card/Card.js";
+
 import Button from "components/CustomButtons/Button.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
@@ -19,11 +20,12 @@ import Parallax from "components/Parallax/Parallax.js";
 
 import profile from "assets/img/faces/yuna.jpg";
 
-import studio1 from "assets/img/examples/studio-1.jpg";
-import studio2 from "assets/img/examples/studio-2.jpg";
-import studio3 from "assets/img/examples/studio-3.jpg";
-import studio4 from "assets/img/examples/studio-4.jpg";
-import studio5 from "assets/img/examples/studio-5.jpg";
+import html from "assets/img/program/html.png";
+import jsp from "assets/img/program/jsp.png";
+import react from "assets/img/program/react.png";
+import bootstrap from "assets/img/program/bootstrap.png";
+import css from "assets/img/program/css.png";
+import redux from "assets/img/program/redux.png";
 import work1 from "assets/img/examples/olu-eletu.jpg";
 import work2 from "assets/img/examples/clem-onojeghuo.jpg";
 import work3 from "assets/img/examples/cynthia-del-rio.jpg";
@@ -104,24 +106,34 @@ export default function ProfilePage(props) {
                           <GridItem xs={12} sm={12} md={4}>
                             <img
                               alt="..."
-                              src={studio1}
+                              src={html}
                               className={navImageClasses}
                             />
                             <img
                               alt="..."
-                              src={studio2}
+                              src={jsp}
                               className={navImageClasses}
                             />
                           </GridItem>
                           <GridItem xs={12} sm={12} md={4}>
                             <img
                               alt="..."
-                              src={studio5}
+                              src={css}
                               className={navImageClasses}
                             />
                             <img
                               alt="..."
-                              src={studio4}
+                              src={bootstrap}
+                              className={navImageClasses}
+                            />
+                               <img
+                              alt="..."
+                              src={redux}
+                              className={navImageClasses}
+                            />
+                                  <img
+                              alt="..."
+                              src={react}
                               className={navImageClasses}
                             />
                           </GridItem>
@@ -178,7 +190,7 @@ export default function ProfilePage(props) {
                             />
                             <img
                               alt="..."
-                              src={studio3}
+                              src={react}
                               className={navImageClasses}
                             />
                           </GridItem>
@@ -195,7 +207,7 @@ export default function ProfilePage(props) {
                             />
                             <img
                               alt="..."
-                              src={studio1}
+                              src={html}
                               className={navImageClasses}
                             />
                           </GridItem>
@@ -209,7 +221,7 @@ export default function ProfilePage(props) {
           </div>
         </div>
       </div>
-      <Footer />
+
     </div>
   );
 }

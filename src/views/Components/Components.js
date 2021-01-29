@@ -2,28 +2,27 @@ import React from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // react components for routing our app without refresh
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
 // core components
 import Header from "components/Header/Header.js";
-import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Parallax from "components/Parallax/Parallax.js";
 // sections for this page
 import HeaderLinks from "components/Header/HeaderLinks.js";
-import SectionBasics from "./Sections/SectionBasics.js";
-import SectionNavbars from "./Sections/SectionNavbars.js";
-import SectionTabs from "./Sections/SectionTabs.js";
-import SectionPills from "./Sections/SectionPills.js";
-import SectionNotifications from "./Sections/SectionNotifications.js";
-import SectionTypography from "./Sections/SectionTypography.js";
-import SectionJavascript from "./Sections/SectionJavascript.js";
+// import SectionBasics from "./Sections/SectionBasics.js";
+// import SectionNavbars from "./Sections/SectionNavbars.js";
+// import SectionTabs from "./Sections/SectionTabs.js";
+// import SectionPills from "./Sections/SectionPills.js";
+// import SectionNotifications from "./Sections/SectionNotifications.js";
+// import SectionTypography from "./Sections/SectionTypography.js";
+// import SectionJavascript from "./Sections/SectionJavascript.js";
 import SectionCarousel from "./Sections/SectionCarousel.js";
-import SectionCompletedExamples from "./Sections/SectionCompletedExamples.js";
-import SectionExamples from "./Sections/SectionExamples.js";
+// import SectionCompletedExamples from "./Sections/SectionCompletedExamples.js";
+// import SectionExamples from "./Sections/SectionExamples.js";
 
 
 import styles from "assets/jss/material-kit-react/views/components.js";
@@ -64,18 +63,22 @@ export default function Components(props) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <SectionCarousel />
         </div>
-        <SectionBasics />
+        <div className={classes.typo}>
+        <div className={classes.container}>
+              <h1 className={classes.subtitle}>The Life of Material Kit</h1>
+            </div>
+            </div>
+        {/* <SectionBasics />
         <SectionNavbars />
         <SectionTabs />
-        <SectionPills />
-        <SectionNotifications />
-        <SectionTypography />
+        <SectionPills /> */}
+        {/* <SectionNotifications /> */}
+        {/* <SectionTypography />
         <SectionJavascript />
-        <SectionCompletedExamples />
-        <SectionExamples />
+        <SectionCompletedExamples /> */}
+        {/* <SectionExamples /> */}
      
     
-      <Footer />
     </div>
   );
 }
