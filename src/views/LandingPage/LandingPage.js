@@ -19,8 +19,16 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
 // Sections for this page
 import ProductSection from "./Sections/ProductSection.js";
-import TeamSection from "./Sections/TeamSection.js";
+// import TeamSection from "./Sections/TeamSection.js";
 import WorkSection from "./Sections/WorkSection.js";
+
+
+//from Profile----- skills
+
+import Schedule from "@material-ui/icons/Schedule";
+import NavPills from "components/NavPills/NavPills.js";
+import Dashboard from "@material-ui/icons/Dashboard";
+import TableSection from "./Sections/TableSection.js";
 
 const dashboardRoutes = [];
 
@@ -29,6 +37,13 @@ const useStyles = makeStyles(styles);
 export default function LandingPage(props) {
   const classes = useStyles();
   const { ...rest } = props;
+
+const imageClasses = classNames(
+  classes.imgRaised,
+  classes.imgRoundedCircle,
+  classes.imgFluid
+);
+const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
   return (
     <div>
       <Header
@@ -72,8 +87,63 @@ export default function LandingPage(props) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <ProductSection />
-          <TeamSection />
+          <GridContainer>
+            <GridItem xs={12} sm={12} md={12} lg={12}>
+              <NavPills
+                color="rose"
+                horizontal={{
+                  tabsGrid: { xs: 12, sm: 4, md: 4 },
+                  contentGrid: { xs: 12, sm: 8, md: 8 }
+                }}
+                tabs={[
+                  {
+                    tabButton: "Career",
+                    tabIcon: Dashboard,
+                    tabContent: (
+                      <span>
+                        <TableSection/>
+                     
+                      </span>
+                    )
+                  },
+                  {
+                    tabButton: "Certification",
+                    tabIcon: Dashboard,
+                    tabContent: (
+                      <span>
+                        <TableSection/>
+                     
+                      </span>
+                    )
+                  },
+                  {
+                    tabButton: "Background",
+                    tabIcon: Schedule,
+                    tabContent: (
+                      <span>
+                        <p>
+                          Efficiently unleash cross-media information without
+                          cross-media value. Quickly maximize timely
+                          deliverables for real-time schemas.
+                        </p>
+                        <br />
+                        <p>
+                          Dramatically maintain clicks-and-mortar solutions
+                          without functional solutions. Dramatically visualize
+                          customer directed convergence without revolutionary
+                          ROI. Collaboratively administrate empowered markets
+                          via plug-and-play networks. Dynamically procrastinate
+                          B2C users after installed base benefits.
+                        </p>
+                      </span>
+                    )
+                  }
+                ]}
+              />
+            </GridItem>
+          </GridContainer>
           <WorkSection />
+        
         </div>
       </div>
 

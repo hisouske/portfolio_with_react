@@ -28,7 +28,6 @@ export default function HeaderLinks(props) {
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
         <CustomDropdown
-          noLiPadding
           buttonText="Components"
           buttonProps={{
             className: classes.navLink,
@@ -40,7 +39,7 @@ export default function HeaderLinks(props) {
               Profile Page
             </Link>,
            <Link to="/landing-page" className={classes.dropdownLink}>
-           Landing Page
+           Resume Page
          </Link>,
           ]}
         />
