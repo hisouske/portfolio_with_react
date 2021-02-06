@@ -21,68 +21,91 @@ import image1 from "assets/img/project/colorchart.jpg";
 import image2 from "assets/img/project/fishing.jpg";
 import image3 from "assets/img/bg3.jpg";
 import Muted from "components/Typography/Muted.js";
-import github from "assets/img/program/github.jpg";
-import gppt from "assets/img/program/googleppt.jpg";
+
 
 import styles from "assets/jss/material-kit-react/views/componentsSections/carouselStyle.js";
 import Badge from "components/Badge/Badge.js";
+
 const useStyles = makeStyles(styles);
 
-export default function SectionCarousel() {
+class CustomSlide extends React.Component {
+  render() {
+    const { index, ...props } = this.props;
+    return (
+      <div {...props}>
+        <h3>{index}</h3>
+      </div>
+    );
+  }
+}
+
+export default function SectionCarousel(props) {
+
+
   const classes = useStyles();
+
+
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    fade: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false
+    autoplay: false,
+    beforeChange: (current,next) => (stateAlert(current,next))
+ 
   };
+
+  const stateAlert=(current,next)=>(alert(current+""+next))
+
+
+
+
   return (
+
+
+
+    
     <div className={classes.section}>
       <div className={classes.container}>
         <GridContainer>
+            
           <GridItem xs={12} sm={12} md={6} className={classes.marginAuto}>
-            <Card carousel>
-              <Carousel {...settings}>
-                <div>
-                  <img src={image1} alt="First slide" className="slick-image" />
-                
-                  <div className="slick-caption">
+            <Card carousel>-----
+              <Carousel {...settings} >
+           <div>
+           <img src={image1}  alt="First slide" className="slick-image"/>
+           <CustomSlide index={1} />
+                  {/* <div className="slick-caption">
                     <h4>
-                    <Badge color="primary">Sea story</Badge>
+                    <Badge color="primary"> Color chart</Badge>
                     </h4>
+                  </div> */}
                   </div>
-                </div>
-                <div>
                 {/* <ReactPlayer url='https://gdurl.com/Pm58' center playing controls className="slick-image"/> */}
-              
+                <div>
                   <img src={image2} alt="Second slide" className="slick-image" />
-                 
+                  
                   <div className="slick-caption">
                     <h4>
                       {/* <LocationOn className="slick-icons" /> */}
-                      Sea Story
+                      <Badge color="primary">  Sea Story</Badge>
 
                     </h4>
                   </div>
-                </div>
-                <div>
+                  </div>
+                  <div>
                   <img src={image3} alt="Third slide" className="slick-image" />
-                
+                 
                   <div className="slick-caption" >
                     <h4>
                     <Badge color="primary">primary</Badge>
                     </h4>
                   </div>
-                </div>
+                  </div>
               </Carousel>
             </Card>  
           </GridItem>
-
-
-
-
 
           <GridItem xs={12} sm={12} md={6} lg={6}>
               <NavPills
@@ -98,22 +121,6 @@ export default function SectionCarousel() {
                           plug-and-play networks. Dynamically procrastinate B2C
                           users after installed base benefits.
                         </p>
-                        <br />
-                        <p>
-                          Dramatically visualize customer directed convergence
-                          without revolutionary ROI. Collaboratively
-                          administrate empowered markets via plug-and-play
-                          networks. Dynamically procrastinate B2C users after
-                          installed base benefits.
-                        </p>
-                        <br />
-                        <p>
-                          Dramatically visualize customer directed convergence
-                          without revolutionary ROI. Collaboratively
-                          administrate empowered markets via plug-and-play
-                          networks. Dynamically procrastinate B2C users after
-                          installed base benefits.
-                        </p>
                       </span>
                     )
                   },
@@ -123,19 +130,11 @@ export default function SectionCarousel() {
                     tabContent: (
                       <span>
                         <p>
-                          Efficiently unleash cross-media information without
+                          aaEfficiently unleash cross-media information without
                           cross-media value. Quickly maximize timely
                           deliverables for real-time schemas.
                         </p>
                         <br />
-                        <p>
-                          Dramatically maintain clicks-and-mortar solutions
-                          without functional solutions. Dramatically visualize
-                          customer directed convergence without revolutionary
-                          ROI. Collaboratively administrate empowered markets
-                          via plug-and-play networks. Dynamically procrastinate
-                          B2C users after installed base benefits.
-                        </p>
                       </span>
                     )
                   },
@@ -154,6 +153,26 @@ export default function SectionCarousel() {
                       <i className="fas fa-play" />
                       Watch video
                     </Button>
+
+                      // <ReactPlayer url='https://gdurl.com/lfH0' playing controls className="slick-image"/>
+                    )
+                  },
+                  {
+                    tabButton: "Function",
+                    tabIcon: Schedule,
+                    tabContent: (
+
+                      
+                  <span>
+                   <h4 >Main Function</h4 >
+                    <br />
+                    <p><i className="fas fa-angle-right" />  RGB / CMYK 값에 따른 컬러구현</p>
+                    <p><i className="fas fa-angle-right" />  컬러정보 추가/삭제 (Oracle DB연동)</p>
+                    <p><i className="fas fa-angle-right" />  컬러 정보 리스트 (Oracle DB연동)</p>
+
+                  </span>
+
+          
 
                       // <ReactPlayer url='https://gdurl.com/lfH0' playing controls className="slick-image"/>
                     )

@@ -50,9 +50,9 @@ export default function Components(props) {
           <GridContainer>
             <GridItem>
               <div className={classes.brand}>
-                <h1 className={classes.title}>Portfol55555io with React.</h1>
+                <h1 className={classes.title}>Portfolio with React.</h1>
                 <h3 className={classes.subtitle}>
-               5555555   A Badass Material-UI Kit based on Material Design.
+               Material-UI KIT를 이용한 웹 포트폴리오
                 </h3>
               </div>
             </GridItem>
@@ -61,7 +61,7 @@ export default function Components(props) {
       </Parallax>
 
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <SectionCarousel />
+        <SectionCarousel test1="none1" test2="none2" />
         </div>
         <div className={classes.typo}>
         <div className={classes.container}>
