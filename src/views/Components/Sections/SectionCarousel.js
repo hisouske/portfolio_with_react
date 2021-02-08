@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 // react component for creating beautiful carousel
 import Carousel from "react-slick";
 // @material-ui/core components
@@ -10,6 +10,7 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Card from "components/Card/Card.js";
 import ReactPlayer from 'react-player';
+import PropTypes from 'prop-types';
 
 import Button from "components/CustomButtons/Button.js";
 //NavPills ---------
@@ -21,51 +22,30 @@ import image1 from "assets/img/project/colorchart.jpg";
 import image2 from "assets/img/project/fishing.jpg";
 import image3 from "assets/img/bg3.jpg";
 import Muted from "components/Typography/Muted.js";
-
-
 import styles from "assets/jss/material-kit-react/views/componentsSections/carouselStyle.js";
 import Badge from "components/Badge/Badge.js";
 
+
 const useStyles = makeStyles(styles);
 
-class CustomSlide extends React.Component {
-  render() {
-    const { index, ...props } = this.props;
-    return (
-      <div {...props}>
-        <h3>{index}</h3>
-      </div>
-    );
-  }
-}
 
-export default function SectionCarousel(props) {
+export default function SectionCarousel() {
 
-
+  const [CurrentIndex,setCurrentIndex]=useState(0);     
   const classes = useStyles();
-
-
   const settings = {
     dots: true,
     infinite: true,
-    fade: true,
+    speed:500,
+    //  fade: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false,
-    beforeChange: (current,next) => (stateAlert(current,next))
- 
+    beforeChange: (current,next) => {setCurrentIndex(next)}
   };
-
-  const stateAlert=(current,next)=>(alert(current+""+next))
-
-
 
 
   return (
-
-
-
-    
     <div className={classes.section}>
       <div className={classes.container}>
         <GridContainer>
@@ -75,7 +55,7 @@ export default function SectionCarousel(props) {
               <Carousel {...settings} >
            <div>
            <img src={image1}  alt="First slide" className="slick-image"/>
-           <CustomSlide index={1} />
+     
                   {/* <div className="slick-caption">
                     <h4>
                     <Badge color="primary"> Color chart</Badge>
@@ -85,7 +65,6 @@ export default function SectionCarousel(props) {
                 {/* <ReactPlayer url='https://gdurl.com/Pm58' center playing controls className="slick-image"/> */}
                 <div>
                   <img src={image2} alt="Second slide" className="slick-image" />
-                  
                   <div className="slick-caption">
                     <h4>
                       {/* <LocationOn className="slick-icons" /> */}
@@ -96,7 +75,6 @@ export default function SectionCarousel(props) {
                   </div>
                   <div>
                   <img src={image3} alt="Third slide" className="slick-image" />
-                 
                   <div className="slick-caption" >
                     <h4>
                     <Badge color="primary">primary</Badge>
@@ -117,9 +95,7 @@ export default function SectionCarousel(props) {
                     tabContent: (
                       <span>
                         <p>
-                          Collaboratively administrate empowered markets via
-                          plug-and-play networks. Dynamically procrastinate B2C
-                          users after installed base benefits.
+            {CurrentIndex}
                         </p>
                       </span>
                     )
