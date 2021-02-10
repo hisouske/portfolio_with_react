@@ -24,7 +24,7 @@ import image3 from "assets/img/bg3.jpg";
 import Muted from "components/Typography/Muted.js";
 import styles from "assets/jss/material-kit-react/views/componentsSections/carouselStyle.js";
 import Badge from "components/Badge/Badge.js";
-
+import NavPillsContents from "./NavPillsContents";
 
 const useStyles = makeStyles(styles);
 
@@ -95,7 +95,7 @@ export default function SectionCarousel() {
                     tabContent: (
                       <span>
                         <p>
-            {CurrentIndex}
+           <NavPillsContents index={CurrentIndex} menu="description"/>
                         </p>
                       </span>
                     )
@@ -106,9 +106,7 @@ export default function SectionCarousel() {
                     tabContent: (
                       <span>
                         <p>
-                          aaEfficiently unleash cross-media information without
-                          cross-media value. Quickly maximize timely
-                          deliverables for real-time schemas.
+                        <NavPillsContents index={CurrentIndex} menu="skills"/>
                         </p>
                         <br />
                       </span>
@@ -142,10 +140,10 @@ export default function SectionCarousel() {
                   <span>
                    <h4 >Main Function</h4 >
                     <br />
-                    <p><i className="fas fa-angle-right" />  RGB / CMYK 값에 따른 컬러구현</p>
+                    {/* <p><i className="fas fa-angle-right" />  RGB / CMYK 값에 따른 컬러구현</p>
                     <p><i className="fas fa-angle-right" />  컬러정보 추가/삭제 (Oracle DB연동)</p>
-                    <p><i className="fas fa-angle-right" />  컬러 정보 리스트 (Oracle DB연동)</p>
-
+                    <p><i className="fas fa-angle-right" />  컬러 정보 리스트 (Oracle DB연동)</p> */}
+  <NavPillsContents index={CurrentIndex} menu="description"/>
                   </span>
 
           
