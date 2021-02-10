@@ -117,7 +117,7 @@ export default function ProfilePage(props) {
                     tabIcon: Dashboard,
                     tabContent: (
                       <span>
-                        <TableSection/>
+                        <TableSection type="career"/>
                      
                       </span>
                     )
@@ -127,7 +127,7 @@ export default function ProfilePage(props) {
                     tabIcon: Dashboard,
                     tabContent: (
                       <span>
-                        <TableSection/>
+                        <TableSection type="certification"/>
                      
                       </span>
                     )

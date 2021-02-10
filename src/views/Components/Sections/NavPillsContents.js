@@ -1,46 +1,54 @@
 import NavPills from "components/NavPills/NavPills";
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-// const useStyles = makeStyles(styles);
+
 
 
 
 export default function NavPillsContents(props) {
-  // const classes = useStyles();
-  const { index,menu} = props;
-  // const {NavCon} = props;
 
-  const Nav2 = [
-    
-      {id:0, description:"description0",skills:"skills0",function:"func0"},
-      {id:1, description: "description1",skills:"skills1",function:"func1"},
-      {id:2, description:"description2",skills:"skills2",function:"func2"}
+  const { index,menu} = props;
+
+  const Nav = [
+      {id:0, 
+        description:(
+      <div>
+        <h3>Color Chart</h3>
+        <br/>
+        컬러차트 설명</div>
+        ) ,
+        skills:"skills0",
+        function:"RGB / CMYK 값에 따른 컬러구현"},
+      {id:1, 
+        description:(
+          <div>
+            <h3>Sea Story</h3>
+            <br/>
+            낚시게임 설명</div>
+            ) ,
+            skills:"skills1",
+            function:"func1"},
+      {id:2, 
+        description:(
+          <div>
+            <h3>CatToy Shop</h3>
+            <br/>
+            고양이 쇼핑몰 설명</div>
+            ) ,skills:"skills2",function:"func2"}
   ];
 
-  console.log(index);
-  // const NavCon = [2, 3, 5, 6, 3, 6, 4];
-
-  // const nav1 = NavCon.map(function (test) {
-  //   return <li>{test}</li>;
-  // });
+// if(menu=="description"){
+//   return <div>{Nav[index][menu]}</div>
+// }
 
   return (
-    
     <div>
-    <div>
-      {index}{menu}
-      </div>
-      
-      {Nav2[index][menu]}
-
-    {/* {NavCon().map(item=>{
+      {/* {index}{menu} 
+        {NavCon().map(item=>{
       return(
         <div>{item.data}</div>
       )
     })} */}
+      {Nav[index][menu]}
     </div>
-  );
-
-
-
-  }
+  ); }

@@ -56,11 +56,11 @@ export default function SectionCarousel() {
            <div>
            <img src={image1}  alt="First slide" className="slick-image"/>
      
-                  {/* <div className="slick-caption">
+                  <div className="slick-caption">
                     <h4>
                     <Badge color="primary"> Color chart</Badge>
                     </h4>
-                  </div> */}
+                  </div>
                   </div>
                 {/* <ReactPlayer url='https://gdurl.com/Pm58' center playing controls className="slick-image"/> */}
                 <div>
@@ -68,7 +68,7 @@ export default function SectionCarousel() {
                   <div className="slick-caption">
                     <h4>
                       {/* <LocationOn className="slick-icons" /> */}
-                      <Badge color="primary">  Sea Story</Badge>
+                      <Badge color="primary"> Sea Story</Badge>
 
                     </h4>
                   </div>
@@ -77,7 +77,7 @@ export default function SectionCarousel() {
                   <img src={image3} alt="Third slide" className="slick-image" />
                   <div className="slick-caption" >
                     <h4>
-                    <Badge color="primary">primary</Badge>
+                    <Badge color="primary">CatToy Shop</Badge>
                     </h4>
                   </div>
                   </div>
@@ -143,7 +143,7 @@ export default function SectionCarousel() {
                     {/* <p><i className="fas fa-angle-right" />  RGB / CMYK 값에 따른 컬러구현</p>
                     <p><i className="fas fa-angle-right" />  컬러정보 추가/삭제 (Oracle DB연동)</p>
                     <p><i className="fas fa-angle-right" />  컬러 정보 리스트 (Oracle DB연동)</p> */}
-  <NavPillsContents index={CurrentIndex} menu="description"/>
+  <NavPillsContents index={CurrentIndex} menu="function"/>
                   </span>
 
           
