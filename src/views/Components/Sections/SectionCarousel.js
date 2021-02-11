@@ -138,12 +138,12 @@ export default function SectionCarousel() {
 
                       
                   <span>
-                   <h4 >Main Function</h4 >
+ <NavPillsContents index={CurrentIndex} menu="function"/>
                     <br />
                     {/* <p><i className="fas fa-angle-right" />  RGB / CMYK 값에 따른 컬러구현</p>
                     <p><i className="fas fa-angle-right" />  컬러정보 추가/삭제 (Oracle DB연동)</p>
                     <p><i className="fas fa-angle-right" />  컬러 정보 리스트 (Oracle DB연동)</p> */}
-  <NavPillsContents index={CurrentIndex} menu="function"/>
+ 
                   </span>
 
           
