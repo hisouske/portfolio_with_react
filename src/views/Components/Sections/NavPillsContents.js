@@ -15,7 +15,7 @@ export default function NavPillsContents(props) {
         <br/>
         <h5>Java Swing 을 이용해서 UI를 구현한 컬러차트 프로그램.
         <br/>
-        해당 색상의 RGB & CMYK 값을 저장하여 정보를 DB에 쉽게 저장하고 불러올 수 있도록 했으며,
+        해당 색상의 RGB & CMYK 값을 저장하여 정보를 DB에 쉽게 저장하고 불러올 수 있도록 제작했으며,
         색상을 즉시 시각적으로 확인 할 수 있다.
 
         

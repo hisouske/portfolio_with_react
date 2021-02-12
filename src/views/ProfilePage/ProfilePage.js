@@ -82,12 +82,10 @@ export default function ProfilePage(props) {
                   <div className={classes.name}>
                     <h3 className={classes.title}>Yuna.K</h3>
                     <h6>PROGRAMMER && DESIGNER</h6>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-github"} />
-                    </Button>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-behance-square fa-3x"} />
-                    </Button>
+                   
+                    <a href="https://github.com/hisouske">  <Button justIcon link className={classes.margin5}><i className={"fab fa-github fa-3x"} /></Button></a>                    
+                    <a href="https://www.behance.net/yuna_/moodboards"> <Button justIcon link className={classes.margin5}> <i className={"fab fa-behance-square fa-3x"} /> </Button></a>
+                   
                     <Button justIcon link className={classes.margin5}>
                       <i className={"fab fa-facebook"} />
                     </Button>
@@ -102,12 +100,12 @@ export default function ProfilePage(props) {
                 feel with a solid groove structure.{" "}
               </p>
             </div>
-              <GridItem xs={12} sm={12} md={10} lg={10}>
+              <GridItem xs={12} sm={12} md={12} lg={12}>
 
               <NavPills
                 color="rose"
                 horizontal={{
-                  tabsGrid: { xs: 12, sm: 4, md: 4 },
+                  tabsGrid: { xs: 12, sm: 2, md: 2 },
                   contentGrid: { xs: 12, sm: 8, md: 8 }
                 }}
                 tabs={[

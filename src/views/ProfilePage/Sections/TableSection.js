@@ -23,13 +23,17 @@ function createCertification(certyear, certtype, certname, certcenter) {
 
 const rows = [
   createCareer('2020.01 ~ 2020.07', '서울대학교 산학협력단', '개발팀 / 연구원', 'IT(웹개발)',(<div> 요인 분석에 따른 솔루션 추천 프로그램 개발 <br />sssss aa</div>)),
-  createCareer('2014.08 ~ 2019.01', 237, 9.0, 37, 4.3),
-  createCareer('2013.03 ~ 2014.08', 262, 16.0, 24, 6.0),
-  createCareer('Cupcake', 305, 3.7, 67, 4.3),
-  createCareer('Gingerbread', 356, 16.0, 49, 3.9),
+  createCareer('2014.08 ~ 2019.01', '㈜하이모', '연구소 / 연구원', '디자인(제품기획&개발)', (<div> 붙임머리 제품개발 (제품개발) <br />- 컨텐츠 관리(제품사진 및 App컨텐츠 관리 및 업그레이드)<br />역설계 프로그램을 이용한 오차측정 (3D촬영기기 오차측정)</div>)),
+  createCareer('2013.03 ~ 2014.08', '㈜레몬아트', '디자인팀 / 사원', '디자인(제품기획&개발)', '상품 패키지디자인 (디자인시계 및 자사특허상품)', (<div> <br />- 자사특허상품 '꼭꼬핀' 3D설계<br />- 벽지 및 시계상품 디자인개발<br />- 상품 상세페이지 제작</div>)),
 ];
 const rows2 = [
-  createCertification('2012.11','자격증','컬러리스트산업기사','한국산업인력공단'),];
+  createCertification('2017.11','자격증','2종보통운전면허','경찰청'),
+  createCertification('2012.11','자격증','컬러리스트산업기사','한국산업인력공단'),
+  createCertification('2012.07','자격증','컴퓨터그래픽스운용기능사','한국산업인력공단'),
+  createCertification('2012.07','자격증','웹디자인기능사','한국산업인력공단'),
+  createCertification('2012.07','공모전','	대한민국디자인전람회 입상','디자인진흥원'),
+  createCertification('2012.07','공모전','	미래생활미용티슈공모전 장려상','미래생활'),
+  createCertification('2012.07','공모전','	인천국제도시디자인 입상','인천광역시'),];
 export default function TableSection(props) {
   const classes = useStyles();
   const {type} = props;
@@ -55,10 +59,10 @@ export default function TableSection(props) {
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
+              <TableCell align="left">{row.calories}</TableCell>
+              <TableCell align="left">{row.fat}</TableCell>
+              <TableCell align="left">{row.carbs}</TableCell>
+              <TableCell align="left">{row.protein}</TableCell>
             </TableRow>
           ))}
         </TableBody>
