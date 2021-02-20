@@ -16,10 +16,8 @@ import Button from "components/CustomButtons/Button.js";
 //NavPills ---------
 
 import Dashboard from "@material-ui/icons/Dashboard";
-import HelpOutline
-
-from "@material-ui/icons/HelpOutline";
-import Schedule from "@material-ui/icons/Schedule";
+import HelpOutline from "@material-ui/icons/HelpOutline";
+import PlayArrow from "@material-ui/icons/PlayArrow";
 import List from "@material-ui/icons/List";
 import NavPills from "components/NavPills/NavPills.js";
 import image1 from "assets/img/project/colorchart.jpg";
@@ -138,7 +136,7 @@ export default function SectionCarousel() {
                   },
                   {
                     tabButton: "Video",
-                    tabIcon: Schedule,
+                    tabIcon: PlayArrow,
                     tabContent: (
                     //   <Button
                     //   color="danger"

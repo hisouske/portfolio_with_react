@@ -164,6 +164,7 @@ export default function ProfilePage(props) {
                 ]}
               />
             </GridItem>
+            <br />
             </GridContainer>
 
 

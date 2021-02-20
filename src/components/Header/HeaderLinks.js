@@ -43,7 +43,7 @@ export default function HeaderLinks(props) {
               Profile
             </Link>,
            <Link to="/landing-page" className={classes.dropdownLink}>
-              Resume
+              Stack
          </Link>,
           ]}
         />

@@ -78,7 +78,8 @@ export default function Components(props) {
         <SectionCompletedExamples /> */}
         {/* <SectionExamples /> */}
      
-    
+     
     </div>
+    
   );
 }

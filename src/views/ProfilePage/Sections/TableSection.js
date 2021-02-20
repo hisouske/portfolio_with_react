@@ -22,9 +22,13 @@ function createCertification(certyear, certtype, certname, certcenter) {
 }
 
 const rows = [
-  createCareer('2020.01 ~ 2020.07', '서울대학교 산학협력단', '개발팀 / 연구원', 'IT(웹개발)',(<div> 요인 분석에 따른 솔루션 추천 프로그램 개발 <br />sssss aa</div>)),
-  createCareer('2014.08 ~ 2019.01', '㈜하이모', '연구소 / 연구원', '디자인(제품기획&개발)', (<div> 붙임머리 제품개발 (제품개발) <br />- 컨텐츠 관리(제품사진 및 App컨텐츠 관리 및 업그레이드)<br />역설계 프로그램을 이용한 오차측정 (3D촬영기기 오차측정)</div>)),
-  createCareer('2013.03 ~ 2014.08', '㈜레몬아트', '디자인팀 / 사원', '디자인(제품기획&개발)', '상품 패키지디자인 (디자인시계 및 자사특허상품)', (<div> <br />- 자사특허상품 '꼭꼬핀' 3D설계<br />- 벽지 및 시계상품 디자인개발<br />- 상품 상세페이지 제작</div>)),
+  createCareer('2020.01 ~ 2020.07', '서울대학교 산학협력단', '개발팀 / 연구원', 'IT(웹개발)',(<div> 요인 분석에 따른 솔루션 추천 프로그램 개발 <br /><br />- Springboot Spring Security<br />
+    - BackEnd _ Spring / FrontEnd _ Javascript<br />
+    - AWS MariaDB 를 이용한 데이터 CRUD<br />
+    - Node.JS 웹서버 구축<br />
+    - Excel 기반 데이터 Json으로 변환하여 정보 송 수신</div>)),
+  createCareer('2014.08 ~ 2019.01', '㈜하이모', '연구소 / 연구원', '디자인(제품기획&개발)', (<div> 붙임머리 제품개발 (제품개발) <br /><br />- 컨텐츠 관리(제품사진 및 App컨텐츠 관리 및 업그레이드)<br />역설계 프로그램을 이용한 오차측정 (3D촬영기기 오차측정)</div>)),
+  createCareer('2013.03 ~ 2014.08', '㈜레몬아트', '디자인팀 / 사원', '디자인(제품기획&개발)', (<div>2D & 3D디자인 (뮤럴벽지 및 인테리어제품)<br /> <br />- 자사특허상품 '꼭꼬핀' 3D설계<br />- 벽지 및 소품 그래픽디자인<br />- 상품 상세페이지 제작</div>)),
 ];
 const rows2 = [
   createCertification('2017.11','자격증','2종보통운전면허','경찰청'),
@@ -41,7 +45,7 @@ export default function TableSection(props) {
 
   console.log(type)
  
-  if(type=="career"){
+  if(type==="career"){
   return (
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
@@ -70,7 +74,7 @@ export default function TableSection(props) {
       </Table>
     </TableContainer>
   );}
-  if(type=="certification"){
+  if(type==="certification"){
 
     return (
       <TableContainer component={Paper}>
