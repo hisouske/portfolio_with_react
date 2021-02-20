@@ -9,18 +9,22 @@ import { makeStyles } from "@material-ui/core/styles";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Card from "components/Card/Card.js";
-import ReactPlayer from 'react-player';
+
 import PropTypes from 'prop-types';
 
 import Button from "components/CustomButtons/Button.js";
 //NavPills ---------
+
 import Dashboard from "@material-ui/icons/Dashboard";
+import HelpOutline
+
+from "@material-ui/icons/HelpOutline";
 import Schedule from "@material-ui/icons/Schedule";
 import List from "@material-ui/icons/List";
 import NavPills from "components/NavPills/NavPills.js";
 import image1 from "assets/img/project/colorchart.jpg";
 import image2 from "assets/img/project/fishing.jpg";
-import image3 from "assets/img/bg3.jpg";
+import image3 from "assets/img/project/cattoyshop.jpg";
 import Muted from "components/Typography/Muted.js";
 import styles from "assets/jss/material-kit-react/views/componentsSections/carouselStyle.js";
 import Badge from "components/Badge/Badge.js";
@@ -51,7 +55,7 @@ export default function SectionCarousel() {
         <GridContainer>
             
           <GridItem xs={12} sm={12} md={6} className={classes.marginAuto}>
-            <Card carousel>-----
+            <Card carousel>
               <Carousel {...settings} >
            <div>
            <img src={image1}  alt="First slide" className="slick-image"/>
@@ -62,7 +66,6 @@ export default function SectionCarousel() {
                     </h4>
                   </div>
                   </div>
-                {/* <ReactPlayer url='https://gdurl.com/Pm58' center playing controls className="slick-image"/> */}
                 <div>
                   <img src={image2} alt="Second slide" className="slick-image" />
                   <div className="slick-caption">
@@ -99,6 +102,27 @@ export default function SectionCarousel() {
                         </p>
                       </span>
                     )
+                  }, {
+                    tabButton: "Function",
+                    tabIcon: HelpOutline
+
+                    ,
+                    tabContent: (
+
+                      
+                  <span>
+ <NavPillsContents index={CurrentIndex} menu="function"/>
+                    <br />
+                    {/* <p><i className="fas fa-angle-right" />  RGB / CMYK 값에 따른 컬러구현</p>
+                    <p><i className="fas fa-angle-right" />  컬러정보 추가/삭제 (Oracle DB연동)</p>
+                    <p><i className="fas fa-angle-right" />  컬러 정보 리스트 (Oracle DB연동)</p> */}
+ 
+                  </span>
+
+          
+
+                      // <ReactPlayer url='https://gdurl.com/lfH0' playing controls className="slick-image"/>
+                    )
                   },
                   {
                     tabButton: "Skills",
@@ -116,41 +140,20 @@ export default function SectionCarousel() {
                     tabButton: "Video",
                     tabIcon: Schedule,
                     tabContent: (
-
-                      <Button
-                      color="danger"
-                      size="lg"
-                      href="https://gdurl.com/lfH0"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <i className="fas fa-play" />
-                      Watch video
-                    </Button>
-
-                      // <ReactPlayer url='https://gdurl.com/lfH0' playing controls className="slick-image"/>
-                    )
-                  },
-                  {
-                    tabButton: "Function",
-                    tabIcon: Schedule,
-                    tabContent: (
-
-                      
-                  <span>
- <NavPillsContents index={CurrentIndex} menu="function"/>
-                    <br />
-                    {/* <p><i className="fas fa-angle-right" />  RGB / CMYK 값에 따른 컬러구현</p>
-                    <p><i className="fas fa-angle-right" />  컬러정보 추가/삭제 (Oracle DB연동)</p>
-                    <p><i className="fas fa-angle-right" />  컬러 정보 리스트 (Oracle DB연동)</p> */}
- 
-                  </span>
-
-          
-
-                      // <ReactPlayer url='https://gdurl.com/lfH0' playing controls className="slick-image"/>
+                    //   <Button
+                    //   color="danger"
+                    //   size="lg"
+                    //   href="https://gdurl.com/lfH0"
+                    //   target="_blank"
+                    //   rel="noopener noreferrer"
+                    // >
+                    //   <i className="fas fa-play" />
+                    //   Watch video
+                    // </Button>
+<div> <NavPillsContents index={CurrentIndex} menu="video"/></div>
                     )
                   }
+                 
                 ]}
               />
             </GridItem>

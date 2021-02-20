@@ -31,6 +31,7 @@ const rows2 = [
   createCertification('2012.11','자격증','컬러리스트산업기사','한국산업인력공단'),
   createCertification('2012.07','자격증','컴퓨터그래픽스운용기능사','한국산업인력공단'),
   createCertification('2012.07','자격증','웹디자인기능사','한국산업인력공단'),
+  createCertification('','','',''),
   createCertification('2012.07','공모전','	대한민국디자인전람회 입상','디자인진흥원'),
   createCertification('2012.07','공모전','	미래생활미용티슈공모전 장려상','미래생활'),
   createCertification('2012.07','공모전','	인천국제도시디자인 입상','인천광역시'),];
@@ -76,10 +77,10 @@ export default function TableSection(props) {
         <Table className={classes.table} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>취득일/수상일</TableCell>
-              <TableCell align="right">구분</TableCell>
-              <TableCell align="right">자격/수상명</TableCell>
-              <TableCell align="right">발행처/기관/언어</TableCell>
+            <TableCell align="left">자격/수상명</TableCell>
+              <TableCell align="left">취득일/수상일</TableCell>
+              <TableCell align="left">구분</TableCell>
+              <TableCell align="left">발행처/기관/언어</TableCell>
      
             </TableRow>
           </TableHead>
@@ -89,10 +90,9 @@ export default function TableSection(props) {
                 <TableCell component="th" scope="row">
                   {row.certname}
                 </TableCell>
-                <TableCell align="right">{row.certyear}</TableCell>
-                <TableCell align="right">{row.certtype}</TableCell>
-                <TableCell align="right">{row.certname}</TableCell>
-                <TableCell align="right">{row.certcenter}</TableCell>
+                <TableCell  align="left">{row.certyear}</TableCell>
+                <TableCell  align="left">{row.certtype}</TableCell>
+                <TableCell  align="left">{row.certcenter}</TableCell>
               </TableRow>
             ))}
           </TableBody>

@@ -65,7 +65,7 @@ export default function Components(props) {
         </div>
         <div className={classes.typo}>
         <div className={classes.container}>
-              <h1 className={classes.subtitle}>The Life of Material Kit</h1>
+             
             </div>
             </div>
         {/* <SectionBasics />
