@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/componentsSections/typographyStyle.js";
-
+import Primary from "components/Typography/Primary.js";
 import ReactPlayer from 'react-player';
 const useStyles = makeStyles(styles);
 
@@ -18,11 +18,11 @@ export default function NavPillsContents(props) {
         
         
                  
-        <h7>
-            프로젝트명<br />컬러 차트<br />
+        <h7 font-weight="bold">
+            <Primary>프로젝트명</Primary>컬러 차트<br />
             
          
-프로젝트 유형<br />JAVA 1인 프로젝트<br />
+            <Primary>프로젝트 유형</Primary>JAVA 1인 프로젝트<br />
 
 프로젝트 목적<br />
 DB에 데이터를 저장하고 Java Swing 을 이용하여 User Interface를 구현 하기<br />

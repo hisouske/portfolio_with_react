@@ -4,6 +4,7 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import IconButton from "@material-ui/core/IconButton";
 // react components for routing our app without refresh
 import { Link } from "react-router-dom";
+import Button from "components/CustomButtons/Button.js";
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -26,8 +27,10 @@ export default function HeaderLinks(props) {
   const classes = useStyles();
   return (
     <List className={classes.list}>
+        
       <ListItem className={classes.listItem}>
-        <CustomDropdown
+
+        {/* <CustomDropdown
           buttonText="Components"
           buttonProps={{
             className: classes.navLink,
@@ -46,11 +49,32 @@ export default function HeaderLinks(props) {
               Stack
          </Link>,
           ]}
-        />
+        /> */}
       </ListItem>
+      
      
 
-   
+      <ListItem className={classes.listItem}>
+        <Button
+          color="transparent"
+          target="_blank"
+          className={classes.navLink}>
+           <Link to="/profile-page" className={classes.dropdownLink}>
+              Profile
+            </Link>
+        </Button>
+        </ListItem>
+        <ListItem className={classes.listItem}>
+        <Button
+          color="transparent"
+          target="_blank"
+          className={classes.navLink}>
+           <Link to="/" className={classes.dropdownLink}>
+               Project
+          </Link>
+        </Button>
+      </ListItem>
+      
     </List>
   );
 }
