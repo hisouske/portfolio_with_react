@@ -17,6 +17,12 @@ const typographyStyle = {
     minHeight: "32px",
     textDecoration: "none"
   },
+  title_desc: {
+    ...title,
+    marginTop: "30px",
+    minHeight: "32px",
+    color: "#000000"
+  },
   typo: {
     paddingLeft: "25%",
     marginBottom: "40px",

@@ -74,6 +74,38 @@ export default function HeaderLinks(props) {
           </Link>
         </Button>
       </ListItem>
+
+
+      <ListItem className={classes.listItem}>
+       
+
+          <Button
+            href="https://github.com/hisouske"
+            target="_blank"
+            color="transparent"
+            className={classes.navLink}
+          >
+            <i className={classes.socialIcons + " fab fa-github"} />
+          </Button>
+        
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        {/* <Tooltip
+          id="instagram-facebook"
+          title="Follow us on facebook"
+          placement={window.innerWidth > 959 ? "top" : "left"}
+          classes={{ tooltip: classes.tooltip }}
+        > */}
+          <Button
+            color="transparent"
+            href="https://www.behance.net/yuna_/moodboards"
+            target="_blank"
+            className={classes.navLink}
+          >
+            <i className={classes.socialIcons + " fab fa-behance-square"} />
+          </Button>
+        {/* </Tooltip> */}
+      </ListItem>
       
     </List>
   );

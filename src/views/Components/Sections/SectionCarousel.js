@@ -23,7 +23,6 @@ import NavPills from "components/NavPills/NavPills.js";
 import image1 from "assets/img/project/colorchart.jpg";
 import image2 from "assets/img/project/fishing.jpg";
 import image3 from "assets/img/project/cattoyshop.jpg";
-import Muted from "components/Typography/Muted.js";
 import styles from "assets/jss/material-kit-react/views/componentsSections/carouselStyle.js";
 import Badge from "components/Badge/Badge.js";
 import NavPillsContents from "./NavPillsContents";
@@ -54,13 +53,15 @@ export default function SectionCarousel() {
             
           <GridItem xs={12} sm={12} md={6} className={classes.marginAuto}>
             <Card carousel>
+            <NavPillsContents index={CurrentIndex} menu="pptlink"/>
+
               <Carousel {...settings} >
            <div>
            <img src={image1}  alt="First slide" className="slick-image"/>
      
                   <div className="slick-caption">
                     <h4>
-                    <Badge color="primary"> Color chart</Badge>
+                    {/* <Badge color="primary"> Color chart</Badge> */}
                     </h4>
                   </div>
                   </div>
@@ -69,7 +70,7 @@ export default function SectionCarousel() {
                   <div className="slick-caption">
                     <h4>
                       {/* <LocationOn className="slick-icons" /> */}
-                      <Badge color="primary"> Sea Story</Badge>
+                      {/* <Badge color="primary"> Sea Story</Badge> */}
 
                     </h4>
                   </div>
@@ -78,15 +79,17 @@ export default function SectionCarousel() {
                   <img src={image3} alt="Third slide" className="slick-image" />
                   <div className="slick-caption" >
                     <h4>
-                    <Badge color="primary">CatToy Shop</Badge>
+                    {/* <Badge color="primary">CatToy Shop</Badge> */}
                     </h4>
                   </div>
                   </div>
               </Carousel>
             </Card>  
+            
           </GridItem>
 
           <GridItem xs={12} sm={12} md={6} lg={6}>
+            
               <NavPills
                 color="primary"
                 tabs={[
@@ -153,6 +156,7 @@ export default function SectionCarousel() {
                   }
                  
                 ]}
+                
               />
             </GridItem>
 
